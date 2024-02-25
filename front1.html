@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Map</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>body {
+      overflow-x: hidden; /* This hides the h scrollbar */
+    }
+    
+    </style>
+</head>
+
+<body>
+  <div class="bg-image" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+           height: 100vh">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <style>
+          .nav-link:hover {
+            color: blue;
+          }
+        </style>
+        <a class="navbar-brand" href="#">Temp Map</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+
+
+              <a class="nav-link" onclick="window.location.href='about us.html'">About us</a>
+
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Other Maps
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" onclick="window.location.href='pollution map.html'">Pollution</a></li>
+                <li><a class="dropdown-item" href="co2.html">Carbon Emissions</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">How use Maps?!! </a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="window.location.href='contact.html'">Contact</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input id="city" class="form-control me-2" type="search" placeholder="Location" aria-label="Search" />
+            <button class="btn btn-outline-success" type="submit" id="submit">City</button>
+          </form>
+          <!-- <div class="col-md-3 text-end">
+            <button type="button" class="btn btn-outline-primary me-2"
+              onclick="window.location.href='login page1.html'">Login</button>
+            <button type="button" class="btn btn-primary"
+              onclick="window.location.href='login page1.html'">Sign-up</button>
+          </div> -->
+        </div>
+      </div>
+    </nav>
+    <!--End of navigation bar -->
+
+
+
+
+    <!--start of body -->
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal text-body-emphasis"><span placeholder="Location" id="cityName"></span></h1>
+      <p class="fs-5 text-body-secondary">Temp and city Info</p>
+    </div>
+    <main>
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center ">
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Climate</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title"><span id="temp2"></span><small
+                  class="text-body-secondary fw-light"></small><span>&#8451;</span></small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>MAX TEMP : <span id="max_temp"></span></li>
+                <li>MIN TEMP : <span id="min_temp"></span></li>
+                <li>TEMP : <span id="temp"></span></li>
+                <li><span id=""></span></li>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-outline-primary">Climate Map</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Weather Conditions </h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title"><span id="humidity2"></span><small
+                  class="text-body-secondary fw-light">%</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>CLOUD : <span id="cloud_pct"></span></li>
+                <li>FEELS LIKE : <span id="feels_like"></span></li>
+                <li>HUMIDITY : <span id="humidity"></span></li>
+                <li><span id=""></span></li>
+                <button type="button" class="w-100 btn btn-lg btn-primary">Map</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Wind</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title"> <span id="wind_speed2"></span><small
+                  class="text-body-secondary fw-light">km/hr</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>WIND DEGREE : <span id="wind_degrees"></span></li>
+                <li>WIND SPEED : <span id="wind_speed"></span></li>
+                <li>SUNRISE : <span id="sunrise"></span></li>
+                <li>SUNSET : <span id="sunset"></span></li>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-outline-primary">Wind Map</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!--start pin city -->
+      <div class="table-responsive">
+        <table class="table text-center">
+          <thead>
+            <tr>
+              <th style="width: 15%;" id="pinCityHeader">Pin City</th>
+              <th style="width: 10%;" id="cloudHeader"> CLOUD </th>
+              <th style="width: 10%;" id="feelsLikeHeader"> FEELS LIKE </th>
+              <th style="width: 10%;" id="humidityHeader"> HUMIDITY </th>
+              <th style="width: 10%;" id="maxTempHeader"> MAX TEMP </th>
+              <th style="width: 10%;" id="minTempHeader"> MIN TEMP </th>
+              <th style="width: 10%;" id="sunriseHeader"> SUNRISE </th>
+              <th style="width: 10%;" id="sunsetHeader"> SUNSET </th>
+              <th style="width: 10%;" id="tempHeader"> TEMP </th>
+              <th style="width: 10%;" id="windDegreesHeader"> WIND DEGREES </th>
+              <th style="width: 10%;" id="windSpeedHeader"> WIND SPEED </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" class="text-start">
+                <span id="pinCity_Mumbai">mumbai</span>
+              </th>
+              <td><span id="cloud_Mumbai"></span></td>
+              <td><span id="feelsLike_Mumbai"></span></td>
+              <td><span id="humidity_Mumbai"></span></td>
+              <td><span id="maxTemp_Mumbai"></span></td>
+              <td><span id="minTemp_Mumbai"></span></td>
+              <td><span id="sunrise_Mumbai"></span></td>
+              <td><span id="sunset_Mumbai"></span></td>
+              <td><span id="temp_Mumbai"></span></td>
+              <td><span id="windDegrees_Mumbai"></span></td>
+              <td><span id="windSpeed_Mumbai"></span></td>
+            </tr>
+
+            <!-- Add rows for other cities with similar span IDs -->
+          </tbody>
+        </table>
+      </div>
+
+      <!--End of pin city -->
+    </main>
+
+    <!--map -->
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
+      <h2 class="display-6 text-center mb-4">Map of City</h2>
+      <div class="">
+        <figure style="max-width:999px" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
+          <div class='tableauPlaceholder' id='viz1706386426707' style='position: relative'><noscript><a href='#'><img
+                  alt='Sheet 2 '
+                  src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;MapSatellite_17063862482930&#47;Sheet2&#47;1_rss.png'
+                  style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+              <param name='embed_code_version' value='3' />
+              <param name='site_root' value='' />
+              <param name='name' value='MapSatellite_17063862482930&#47;Sheet2' />
+              <param name='tabs' value='no' />
+              <param name='toolbar' value='yes' />
+              <param name='static_image'
+                value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;MapSatellite_17063862482930&#47;Sheet2&#47;1.png' />
+              <param name='animate_transition' value='yes' />
+              <param name='display_static_image' value='yes' />
+              <param name='display_spinner' value='yes' />
+              <param name='display_overlay' value='yes' />
+              <param name='display_count' value='yes' />
+              <param name='language' value='en-US' />
+              <param name='filter' value='publish=yes' />
+            </object></div>
+          <script
+            type='text/javascript'>                    var divElement = document.getElementById('viz1706386426707'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+          <script
+            type='text/javascript'>                    var divElement = document.getElementById('viz1706385561513'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+          <script
+            type='text/javascript'>                    var divElement = document.getElementById('viz1706384550368'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+          <script
+            type='text/javascript'>                    var divElement = document.getElementById('viz1706384399539'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+
+
+
+
+      </div>
+
+
+
+
+
+      <!--map end-->
+
+
+      <script
+        type='text/javascript'>                    var divElement = document.getElementById('viz1706381627910'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      </figure>
+      <a class="icon-link" href="#">
+        Home
+        <svg class="bi">
+          <use xlink:href="#chevron-right"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+
+  <p style="margin-bottom: 1075px;"></p>
+  <p></p>
+      <!-- Footer -->
+      <footer class="text-center text-lg-start bg-light text-muted">
+        <div class="container p-4">
+          <div class="row">
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+              <h5 class="text-uppercase">About Us</h5>
+              <p>
+                We are dedicated to providing accurate and up-to-date season information. Explore our maps and stay informed about climate, conditions, and forecasts for your location.
+              </p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Quick Links</h5>
+              <ul class="list-unstyled mb-0">
+                <li><a href="#" class="text-muted">Home</a></li>
+                <li><a href="about us.html" class="text-muted">About Us</a></li>
+                <li><a href="pollution map.html" class="text-muted">Pollution Map</a></li>
+                
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Contact</h5>
+              <ul class="list-unstyled mb-0">
+                <li>Email: TempMap@gmail.com</li>
+                <li>Phone:  123 456 7890</li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2024 Meteorological Conditions 
+        </div>
+      </footer>
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <script src="script.js"></script>
+
+
+  </div>
+
+
+
+
+</body>
+
+</html>
