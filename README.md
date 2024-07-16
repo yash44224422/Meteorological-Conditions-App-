@@ -8,6 +8,9 @@ Website provides the user with the temperature, humidity, wind speed, and cloud 
 
 
 ![Weather Data](https://github.com/user-attachments/assets/1a2c51ee-46db-4e18-8d33-6647ffdf0a08)
+![image](https://github.com/user-attachments/assets/e7b46d31-9c14-4d04-8e43-b07cc94fb8d5)
+![image](https://github.com/user-attachments/assets/9150ef22-5ae0-4f96-ab06-a876e51696f6)
+
 
 
 ## Introduction
