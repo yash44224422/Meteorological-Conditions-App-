@@ -1,10 +1,14 @@
 # Meteorological-Conditions-App-
-Website provides the user with the temperature, humidity, wind speed, and cloud of a particular region .Use javascript , HTML,Tablue and CSS.
+Website provides the user with the temperature, humidity, wind speed, and cloud of a particular region .Use javascript , HTML,Tableau and CSS.
 
 ## Screenshots
 
-![Home Page](screenshots/home_page.png)
-![Weather Data](screenshots/weather_data.png)
+![Home Page](https://github.com/user-attachments/assets/d65adeb5-a15c-4e49-a0f0-c9f51eb76e83)
+![image](https://github.com/user-attachments/assets/228cfa0a-0ea7-436c-b2ae-654ebc5b3c90)
+
+
+![Weather Data](https://github.com/user-attachments/assets/1a2c51ee-46db-4e18-8d33-6647ffdf0a08)
+
 
 ## Introduction
 
@@ -30,36 +34,11 @@ The app caters to a diverse range of users:
 
 ## Technologies Used
 
-- **Front-End**: HTML, CSS, JavaScript
-- **Back-End**: Java
-- **Database**: SQLite
+- **Front-End**: HTML, CSS, JavaScript,Tableau.
+- **Back-End**: JavaScript
 - **APIs**: External weather APIs such as API-Ninjas for fetching real-time weather data.
 
-## Installation and Setup
 
-### Prerequisites
-
-- Java Development Kit (JDK)
-- SQLite
-- Visual Studio Code or any preferred IDE
-
-### Steps to Setup
-
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/YashRajguru/Meteorological-Conditions-App.git
-   ```
-
-2. **Navigate to the Project Directory**
-   ```bash
-   cd Meteorological-Conditions-App
-   ```
-
-3. **Install Dependencies**
-   Ensure you have the necessary dependencies installed for running the project. You can use package managers or manually download the required libraries.
-
-4. **Run the Application**
-   Open the project in your IDE and run the main application file.
 
 ## Usage
 
@@ -74,19 +53,19 @@ Once the application is up and running, you can:
 
 ### Use Case Diagram
 
-![Use Case Diagram](uml/use_case_diagram.png)
+![Use Case Diagram](https://github.com/user-attachments/assets/2113789e-b547-4d91-b05f-8443cd328b52)
+
+
 
 ### Activity Diagram
 
-![Activity Diagram](uml/activity_diagram.png)
+![Activity Diagram](https://github.com/user-attachments/assets/ae52133e-57d4-4d2d-a20c-cee62b8880aa)
+
 
 ## Conclusion
 
 The Meteorological Conditions App is designed to provide accurate and real-time weather information to users, helping them make informed decisions. It is a versatile tool catering to various user needs, from daily weather updates to detailed climate analysis.
 
-## Acknowledgements
-
-I would like to thank Dr. Abhijit Banubakode, Principal, and Prof. [Faculty Name], project guide, for their constant support and guidance in the successful completion of this project.
 
 ## License
 
@@ -96,7 +75,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For any queries or feedback, please contact:
 - Yash Valmik Rajguru
-- Email: yash.rajguru@example.com
+- Email: yashrajguru.442002@gmail.com
 
 ---
 
