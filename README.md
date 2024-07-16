@@ -13,6 +13,19 @@ Website provides the user with the temperature, humidity, wind speed, and cloud 
 
 
 
+## UML Diagrams
+
+### Use Case Diagram
+
+![image](https://github.com/user-attachments/assets/265f0a40-d3cc-4901-8f1a-de17c4f11762)
+
+
+
+
+### Activity Diagram
+![image](https://github.com/user-attachments/assets/f3e29d89-02ad-48de-a4b4-03fddfa362ba)
+
+
 ## Introduction
 
 Welcome to the Meteorological Conditions App project repository. This project is developed as a part of the MCA curriculum at MET-ICS, University of Mumbai. The app aims to provide users with real-time weather updates and comprehensive weather information for various locations.
@@ -52,17 +65,8 @@ Once the application is up and running, you can:
 3. Fetch and view the current weather conditions and forecasts for the selected location.
 
 
-## UML Diagrams
-
-### Use Case Diagram
-
-![Use Case Diagram](https://github.com/user-attachments/assets/2113789e-b547-4d91-b05f-8443cd328b52)
 
 
-
-### Activity Diagram
-
-![Activity Diagram](https://github.com/user-attachments/assets/ae52133e-57d4-4d2d-a20c-cee62b8880aa)
 
 
 ## Conclusion
